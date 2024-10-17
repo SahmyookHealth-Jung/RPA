@@ -12,4 +12,4 @@ async def read_item(item_id : int, name: str = None, age : int =0):
 
 @app.get("/user")
 async def read_user(name : str = None, studentcode:int =0, major:str=None):
-    return{"msg: " + major + name + studentcode}
+    return{"msg: ": major , name : studentcode }
