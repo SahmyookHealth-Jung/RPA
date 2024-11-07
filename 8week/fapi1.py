@@ -31,7 +31,7 @@ async def create_upload_file(file: UploadFile = File(...)):
     save_path.parent.mkdir(parents=True, exist_ok=True)
 
     with save_path.open("wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+        shutil.copyfileobj(file.file, buffer)         #static/uploads/ 에 저장  
 
     return {"filename" : file.filename, "location": str(save_path)}
 

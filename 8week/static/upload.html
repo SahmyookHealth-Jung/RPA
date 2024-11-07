@@ -13,10 +13,10 @@
         async function uploadFile() {
             const fileInput = document.getElementById('file');
             const formData = new FormData();
-            formData.append('file', fileInput.files[0]);
+            formData.append('file', fileInput.files[0]);  //@app.post('/uploadfile/')
 
             const response = await fetch('/uploadfile/' , {
-                method: "POST",
+                method: "POST",   // 이미지는 file : uploadFile = File(...) 쪽으로 들어감  static/uploads/image1 이 최종 목적지 
                 body: formData,
             });
 
